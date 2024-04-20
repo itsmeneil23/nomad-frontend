@@ -5,7 +5,7 @@ const Detailpage = () => {
   return (
     <div className="px-24">
       <h1 className="text-white text-2xl font-medium pb-3">Taj Mahal</h1>
-      <div className="gap-2 flex pb-6">
+      <div className="gap-5 flex pb-6">
         <Image
           src="/images/taj.jpg"
           alt="hero"
@@ -13,19 +13,19 @@ const Detailpage = () => {
           height={500}
           className="rounded-md"
         />
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col gap-5 justify-between">
           <Image
             src="/images/taj.jpg"
             alt="hero"
-            width={245}
-            height={245}
+            width={240}
+            height={240}
             className="rounded-md"
           />
           <Image
             src="/images/taj.jpg"
             alt="hero"
-            width={245}
-            height={245}
+            width={240}
+            height={240}
             className="rounded-md"
           />
         </div>
