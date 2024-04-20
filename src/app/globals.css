@@ -30,4 +30,10 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .bl{
+    border-radius: 10px 0 0 10px;
+  }
+  .br{
+    border-radius: 0 10px 10px 0;
+  }
 }

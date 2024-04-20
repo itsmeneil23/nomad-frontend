@@ -1,63 +1,90 @@
+import Detailpage from "@/components/Detailpage";
+import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <form className="flex">
-        <input
-          type="text"
-          placeholder="Type here"
-          className="input input-bordered w-full max-w-xs"
-        />
-        <button className="btn">Send</button>
-      </form>
-      <section className="flex justify-around w-full">
-        <div className="card w-96 bg-base-100 shadow-xl">
-          <figure>
-            <img
-              src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-              alt="Shoes"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+    <main>
+      <section className="flex  flex-col items-center justify-between px-24 pt-32">
+        <Navbar/>
+        <section className="h-screen w-full">
+          <div className="flex justify-between items-center">
+            <div className="w-1/2">
+              <p className="font-medium text-xl bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 text-transparent bg-clip-text ">
+                AI Tour Guide: Revolutionizing travel with personalized
+                guidance, real-time recommendations, and cultural immersion,
+                enhancing every journey with unparalleled insights and
+                convenience.
+              </p>
+            </div>
+            <div className="w-1/2 h-full">
+              <Image
+                src="/images/hero.jpeg"
+                alt="hero"
+                width={500}
+                height={500}
+                className="h-full w-full"
+              />
             </div>
           </div>
-        </div>
-        <div className="card w-96 bg-base-100 shadow-xl">
-          <figure>
-            <img
-              src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-              alt="Shoes"
+          <form className="flex items-center justify-center pt-24">
+            <input
+              type="text"
+              placeholder="Type here"
+              className="p-4 bl w-full max-w-xs"
             />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+            <button className="p-4 br bg-slate-800">Send</button>
+          </form>
+        </section>
+        <section className="flex justify-around w-full mt-2">
+          <div className="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                alt="Shoes"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">Taj Mahal</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div className="card-actions justify-end">
+                <button className="btn btn-primary">Explore More</button>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="card w-96 bg-base-100 shadow-xl">
-          <figure>
-            <img
-              src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-              alt="Shoes"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+          <div className="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                alt="Shoes"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">Fort Kochi</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div className="card-actions justify-end">
+                <button className="btn btn-primary">Explore More</button>
+              </div>
             </div>
           </div>
-        </div>
+          <div className="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                alt="Shoes"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">Mantanchery Palace</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div className="card-actions justify-end">
+                <button className="btn btn-primary">Explore More</button>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
+      <Detailpage />
     </main>
   );
 }
