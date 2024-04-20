@@ -5,8 +5,8 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
+      <Navbar/>
       <section className="flex  flex-col items-center justify-between px-24 pt-32">
-        <Navbar/>
         <section className="h-screen w-full">
           <div className="flex justify-between items-center">
             <div className="w-1/2">
@@ -23,7 +23,7 @@ export default function Home() {
                 alt="hero"
                 width={500}
                 height={500}
-                className="h-full w-full"
+                className="h-full w-full rounded-lg"
               />
             </div>
           </div>
