@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const cardsData = [
   {
@@ -39,7 +40,12 @@ const Card = ({ imageSrc, title, description, buttonText }) => (
   </div>
 );
 
-const Input = () => {
+export default function Input(){
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+  };
   return (
     <div className="pb-5 px-24">
     <form className="flex items-center justify-center py-5">
@@ -48,7 +54,14 @@ const Input = () => {
         placeholder="Type here"
         className="border w-full bl p-3 input-bordered  max-w-xs"
       />
-      <button className="rounded text-white bg-slate-700 br p-3">Send</button>
+      <button 
+        onClick={handleClick}
+        className={`transition-colors duration-300 ease-in-out ${
+          isClicked
+            ? "bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+            : "rounded text-white bg-slate-700 br p-3" 
+        } text-white px-4 py-2 rounded-md`}
+      >Send</button>
       </form>
       <div className="flex justify-around">
         {cardsData.map((card, index) => (
@@ -58,5 +71,3 @@ const Input = () => {
     </div>
   );
 };
-
-export default Input;

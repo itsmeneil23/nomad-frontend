@@ -1,6 +1,6 @@
 import React from "react";
 
-const Planner = () => {
+export default function Planner() {
   const places = [
     { name: "Kochi Marine Drive", time: "10:00AM" },
     { name: "Fort Kochi", time: "11:00AM" },
@@ -43,6 +43,4 @@ const Planner = () => {
       </div>
     </section>
   );
-};
-
-export default Planner;
+}

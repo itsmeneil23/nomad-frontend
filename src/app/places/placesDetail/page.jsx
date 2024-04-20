@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const Detailpage = () => {
+export default function Detailpage() {
   return (
     <div className="px-24">
       <h1 className="text-white text-2xl font-medium pb-3">Taj Mahal</h1>
@@ -34,8 +34,28 @@ const Detailpage = () => {
       <p className="text-white pt-3">Mausoleum in Agra, Uttar Pradesh</p>
       <div>
         <ul className="flex gap-2 pt-3">
-            <li className="p-2 border border-gray-600 rounded-full"><a href="#" className="flex items-center justify-center gap-2"><Image src="/images/share.svg" alt="share" width={15} height={15}/><span className="text-white">Share</span></a></li>
-            <li className="p-2 border border-gray-600 rounded-full"><a href="#" className="flex items-center justify-center gap-2"><Image src="/images/location.svg" alt="share" width={15} height={15}/><span className="text-white">Direction</span></a></li>
+          <li className="p-2 border border-gray-600 rounded-full">
+            <a href="#" className="flex items-center justify-center gap-2">
+              <Image
+                src="/images/share.svg"
+                alt="share"
+                width={15}
+                height={15}
+              />
+              <span className="text-white">Share</span>
+            </a>
+          </li>
+          <li className="p-2 border border-gray-600 rounded-full">
+            <a href="#" className="flex items-center justify-center gap-2">
+              <Image
+                src="/images/location.svg"
+                alt="share"
+                width={15}
+                height={15}
+              />
+              <span className="text-white">Direction</span>
+            </a>
+          </li>
         </ul>
       </div>
       <p className="text-white pt-6">
@@ -50,6 +70,4 @@ const Detailpage = () => {
       </p>
     </div>
   );
-};
-
-export default Detailpage;
+}
