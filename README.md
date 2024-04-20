@@ -1,2 +1,2 @@
 # nomad-frontend
-Introducing No mad - ai travel guide
+Introducing Nomad - ai travel guide
