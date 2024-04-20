@@ -1,5 +1,6 @@
 import Detailpage from "@/components/Detailpage";
 import Navbar from "@/components/Navbar";
+import UserInput from "@/components/input";
 import Image from "next/image";
 
 export default function Home() {
@@ -27,14 +28,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <form className="flex items-center justify-center pt-24">
-            <input
-              type="text"
-              placeholder="Type here"
-              className="p-4 bl w-full max-w-xs"
-            />
-            <button className="p-4 br bg-slate-800">Send</button>
-          </form>
+      <UserInput></UserInput>
         </section>
         <section className="flex justify-around w-full mt-2">
           <div className="card w-96 bg-base-100 shadow-xl">
