@@ -1,60 +1,62 @@
-"use client";
+import React from "react";
 
-import axios from "axios";
-import { useState } from "react";
+const cardsData = [
+  {
+    imageSrc:
+      "/images/taj.jpg",
+    title: "Taj Mahal",
+    description: "Mausoleum in Agra, Uttar Pradesh",
+    buttonText: "Explore Now",
+  },
+  {
+    imageSrc:
+      "/images/taj.jpg",
+    title: "Taj Mahal",
+    description: "Mausoleum in Agra, Uttar Pradesh",
+    buttonText: "Explore Now",
+  },
+  {
+    imageSrc:
+      "/images/taj.jpg",
+    title: "Taj Mahal",
+    description: "Mausoleum in Agra, Uttar Pradesh",
+    buttonText: "Explore Now",
+  },
+];
 
+const Card = ({ imageSrc, title, description, buttonText }) => (
+  <div className="card card-compact w-96 bg-base-100 shadow-xl">
+    <figure>
+      <img src={imageSrc} alt={`${title} Image`} />
+    </figure>
+    <div className="card-body">
+      <h2 className="card-title">{title}</h2>
+      <p>{description}</p>
+      <div className="card-actions justify-end">
+        <button className="btn btn-primary">{buttonText}</button>
+      </div>
+    </div>
+  </div>
+);
 
-function UserInput() {
-  const [textQuery, setTextQuery] = useState("");
-  const [places, setPlaces] = useState([]);
-  const [error, setError] = useState(null);
-  const [loading, SetLoading] = useState(false);
-
-  const handleInputChange = (event) => {
-    setTextQuery(event.target.value);
-  };
-
-  const handleSubmit = async (e) => {
-    setError(null); // Clear any previous errors
-    SetLoading(true);
-    e.preventDefault();
-
-    try {
-      const headers = {
-        "Content-Type": "application/json",
-        "X-Goog-Api-Key": "AIzaSyC2wtxTzDWI4rXklb0I8zkrk8oj8j-XuOo", // Replace with your actual API key
-        "X-Goog-FieldMask":
-          "places.photos,places.displayName.text,places.formattedAddress,places.rating,places.editorialSummary.text,places.googleMapsUri",
-      };
-
-      const response = await axios.post(
-        "https://maps.googleapis.com/maps/api/place/findplacetext",
-        { textQuery },
-        { headers }
-      );
-
-      console.log(places)
-      setPlaces(response.data.candidates); // Assuming the data is in candidates
-      SetLoading(false)
-    } catch (error) {
-      console.error(error);
-      setError("Failed to fetch place data");
-    }
-  };
-
+const Input = () => {
   return (
-
-    <form className="flex items-center justify-center pt-24">
+    <div className="pb-5 px-24">
+    <form className="flex items-center justify-center py-5">
       <input
         type="text"
-        onChange={handleInputChange}
-        value={textQuery}
         placeholder="Type here"
-        className="p-4 bl w-full max-w-xs"
+        className="border w-full bl p-3 input-bordered  max-w-xs"
       />
-      <button onClick={handleSubmit} className="p-4 br bg-slate-800">Send</button>
-    </form>
+      <button className="rounded text-white bg-slate-700 br p-3">Send</button>
+      </form>
+      <div className="flex justify-around">
+        {cardsData.map((card, index) => (
+          <Card key={index} {...card} />
+        ))}
+      </div>
+    </div>
   );
-}
+};
 
-export default UserInput;
+export default Input;

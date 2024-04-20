@@ -28,61 +28,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <form className="flex items-center justify-center pt-24">
-            <input
-              type="text"
-              placeholder="Type here"
-              className="p-4 bl w-full max-w-xs"
-            />
-            <button className="p-4 br bg-slate-800">Send</button>
-          </form>
-        </section>
-        <section className="flex justify-around w-full mt-2">
-          <div className="card w-96 bg-base-100 shadow-xl">
-            <figure>
-              <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">Taj Mahal</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Explore More</button>
-              </div>
-            </div>
-          </div>
-          <div className="card w-96 bg-base-100 shadow-xl">
-            <figure>
-              <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">Fort Kochi</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Explore More</button>
-              </div>
-            </div>
-          </div>
-          <div className="card w-96 bg-base-100 shadow-xl">
-            <figure>
-              <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">Mantanchery Palace</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Explore More</button>
-              </div>
-            </div>
-          </div>
         </section>
       </section>
       <Input/>
