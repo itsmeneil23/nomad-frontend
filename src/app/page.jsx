@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <section className="bg-hero flex items-cetenter justify-center flex-col h-screen brightness-90 w-full bg-cover bg-no-repeat">
+    <section className="bg-hero flex items-center justify-center flex-col h-screen brightness-90 w-full bg-cover bg-no-repeat">
       <div className="flex flex-col items-center justify-center gap-5 h-full w-full">
         <h2 className="text-white text-6xl text-center font-bold brightness-125">
           Take control of your
