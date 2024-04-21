@@ -36,7 +36,7 @@ export default function Planner() {
         </div>
       ) : (
         <>
-          <h1 className="text-3xl text-white pb-6">Trip Planner</h1>
+          <h1 className="text-3xl text-white pb-6 font-semibold">Trip Planner</h1>
           <div>
             <ul className="timeline timeline-vertical">
               {places.map((place, index) => (
