@@ -1,7 +1,6 @@
 import { Urbanist } from "next/font/google";
 import Image from "next/image";
 import "./globals.css";
-import Loader from "./places/_components/Loader";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 

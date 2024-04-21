@@ -18,13 +18,13 @@ export default function Home() {
         <div className="flex items-center justify-center gap-5">
           <Link
             href={"/places"}
-            className="py-5 px-3 rounded-md text-white font-semibold text-xl brightness-150"
+            className="bg-white text-white bg-opacity-20 backdrop-blur-lg backdrop-filter backdrop-saturate-150 border border-gray-300 rounded-md p-3 font-medium brightness-100"
           >
             Get Started
           </Link>
           <Link
             href={"/planner"}
-            className="py-5 px-3 rounded-md text-white font-semibold text-xl brightness-150"
+            className="bg-white text-white bg-opacity-20 backdrop-blur-lg backdrop-filter backdrop-saturate-150 border border-gray-300 rounded-md p-3 font-medium brightness-100"
           >
             Trip a plan
           </Link>
